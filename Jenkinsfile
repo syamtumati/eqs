@@ -10,9 +10,11 @@ pipeline {
             }
         }
         stage('DockerHub Push'){
-            withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerHubPwd')]) {
+            steps{
+              withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerHubPwd')]) {
                 sh "docker login -u mgrbic -p ${dockerHubPwd}"
                 sh "docker push mgrbic/eqs:${DOCKER_TAG}"
+              }
             }
         }
     }
