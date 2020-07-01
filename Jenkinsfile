@@ -3,11 +3,11 @@ pipeline {
     environment{
         DOCKER_TAG = getDockerTag()
     }
-    stage('Initialize'){
-        def dockerHome = tool 'myDocker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-    }
     stages {
+        stage('Initialize'){
+            def dockerHome = tool 'myDocker'
+            env.PATH = "${dockerHome}/bin:${env.PATH}"
+        }
         stage('Build Docker Image'){
             steps{
                 sh "docker build . -t mgrbic/eqs:${DOCKER_TAG}"
