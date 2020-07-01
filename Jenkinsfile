@@ -3,6 +3,10 @@ pipeline {
     environment{
         DOCKER_TAG = getDockerTag()
     }
+    stage('Initialize'){
+        def dockerHome = tool 'myDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
     stages {
         stage('Build Docker Image'){
             steps{
