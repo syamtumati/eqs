@@ -1,27 +1,27 @@
-# apiVersion: extensions/v1beta1
-# kind: Ingress
-# metadata:
-#   name: ingress
-# spec:
-#   rules:
-#   - host: delivereo.tk
-#     http:
-#       paths:
-#         - backend:
-#             serviceName: delivereotk
-#             servicePort: 80
-#   - host: back.delivereo.tk
-#     http:
-#       paths:
-#         - backend:
-#             serviceName: nodeapp
-#             servicePort: 80
+# # apiVersion: extensions/v1beta1
+# # kind: Ingress
+# # metadata:
+# #   name: ingress
+# # spec:
+# #   rules:
+# #   - host: delivereo.tk
+# #     http:
+# #       paths:
+# #         - backend:
+# #             serviceName: delivereotk
+# #             servicePort: 80
+# #   - host: back.delivereo.tk
+# #     http:
+# #       paths:
+# #         - backend:
+# #             serviceName: nodeapp
+# #             servicePort: 80
 
- apiVersion: networking.k8s.io/v1beta1
- kind: Ingress
- metadata:
-   name: test-ingress
- spec:
-    backend:
-      serviceName: nodeapp
-      servicePort: 80
+#  apiVersion: networking.k8s.io/v1beta1
+#  kind: Ingress
+#  metadata:
+#    name: test-ingress
+#  spec:
+#     backend:
+#       serviceName: nodeapp
+#       servicePort: 80
