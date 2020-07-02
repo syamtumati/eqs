@@ -17,7 +17,7 @@ pipeline {
               }
             }
         }
-        stage('Deploy to kubernetes')
+        stage('Deploy to kubernetes'){
             steps{
                 sh "chmod +x tag.sh"
                 sh "./tag.sh ${DOCKER_TAG}"
@@ -30,6 +30,7 @@ pipeline {
                         sh "ssh ubuntu@54.191.253.34 kubectl create -f ."
                     }
                 }*/
+                }
 			}
         }
     }
