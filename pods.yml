@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
     - name: nodeapp
-      image: kammana/nodeapp:tagVersion
+      image: mgrbic/eqs:tagVersion
       ports:
         - containerPort: 8002
