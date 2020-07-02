@@ -10,4 +10,4 @@ spec:
     - name: nodeapp
       image: kammana/nodeapp:tagVersion
       ports:
-        - containerPort: 80
+        - containerPort: 8002
