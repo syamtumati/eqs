@@ -10,4 +10,4 @@ spec:
     - name: nodeapp
       image: mgrbic/eqs:tagVersion
       ports:
-        - containerPort: 8002
+        - containerPort: 80
