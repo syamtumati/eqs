@@ -23,13 +23,13 @@ pipeline {
                 sh "./tag.sh ${DOCKER_TAG}"
                 sshagent(['master-key']) {    
 				sh "scp -o StrictHostKeyChecking=no services.yml node-app-pod.yml ubuntu@54.191.253.34:/home/ubuntu/"
-               /* script{
+                script{
                     try{
                         sh "ssh ubuntu@54.191.253.34 kubectl apply -f ."
                     }catch(error){
                         sh "ssh ubuntu@54.191.253.34 kubectl create -f ."
                     }
-                }*/
+                }
                 }
 			}
         }
